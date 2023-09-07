@@ -1,38 +1,135 @@
 .App {
+  width: 70%;
+  margin: 10vh auto;
+  height: 80vh;
+  border-radius: 10px;
+  border: 1px solid #161619;
+  overflow-y: hidden;
+  background-color: #1A1B21;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info--container {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App * {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.info--image {
+  background-image: url("./static/images/dp.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.info--title {
+  font-size: 1.5em;
+  padding: 15px 0 2px;
+}
+
+.info--status {
+  font-size: 0.7em;
+  font-weight: normal;
+  color: #F3BF99;
+}
+
+.info--website {
+  font-size: 0.55em;
+  padding: 8px 0;
+}
+
+.btn--container {
   display: flex;
-  flex-direction: column;
+  gap: 10px;
+  padding: 0 10%;
+  align-items: center;
+}
+
+.info--btn {
+  border-radius: 5px;
+  flex: 50%;
+  padding: 6px 0;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+}
+
+.info--btn_icon {
+  margin-right: 5px;
+}
+
+.about-container,
+.interest-container {
+  padding: 1em 10% 0;
+}
+
+.interest-container {
+  margin-bottom: 1.5em;
+}
+
+.display2 {
+  font-size: 1em;
+  margin: 4px 0;
+}
+
+.display-normal {
+  font-size: 0.7em;
+  color: #DCDCDC;
+}
+
+.footer {
+  height: 4em;
+  background-color: #161619;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer * {
+  font-size: 1.5em;
+  color: #918E9B;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 300px) {
+  .App {
+    width: 100%;
+    margin: 0;
+    height: 100%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 700px), screen and (orientation: landscape) {
+  .info--container {
+    display: flex;
+    /* padding: 1em; */
+    width: 80%;
+    margin: auto;
+  }
+
+  .info--image {
+    flex: 30%;
+  }
+
+  .info--data {
+    flex: 70%;
+  }
+
+  .btn--container {
+    padding: 25px 0;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .info--btn {
+    width: 60%;
   }
 }
